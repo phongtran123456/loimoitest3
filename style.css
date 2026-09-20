@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #fef2f2 0%, #fff1f2 50%, #fce7f3 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #4a4a4a;
+}
+
+.container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px 20px;
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.12);
+  text-align: center;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.card.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tag {
+  display: inline-block;
+  background: #ffe4e6;
+  color: #e11d48;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.envelope-icon {
+  font-size: 56px;
+  margin: 8px 0;
+}
+
+h1, h2 {
+  font-size: 22px;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+h1 em, h2 em {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #e11d48;
+  display: block;
+  font-style: normal;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* KHU VỰC CÁC NÚT BẤM CĂN GIỮA ĐẸP MẮT */
+.actions-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+@media (min-width: 380px) {
+  .actions-area {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+@media (min-width: 380px) {
+  .btn {
+    width: auto;
+  }
+}
+
+/* NÚT CHÍNH MÀU HỒNG ĐỎ */
+.btn-primary {
+  background-color: #f43f5e;
+  color: white;
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+/* NÚT PHỤ MÀU XÁM BAN ĐẦU */
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* HIỆU ỨNG CHUYỂN SANG NÚT HỒNG ĐỎ KHI BẤM "ĐỂ SUY NGHĨ ĐÃ" */
+.btn-converted {
+  background-color: #f43f5e !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3) !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #f3f4f6;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  background-color: #fafafa;
+}
+
+.form-group input:focus {
+  border-color: #f43f5e;
+  background-color: #fff;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip-checkbox {
+  cursor: pointer;
+}
+
+.chip-checkbox input {
+  display: none;
+}
+
+.chip-checkbox span {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.chip-checkbox input:checked + span {
+  background-color: #ffe4e6;
+  color: #e11d48;
+  border-color: #f43f5e;
+}
+
+.summary-box {
+  background: #fff5f5;
+  border: 1px dashed #fca5a5;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ffe4e6;
+  gap: 12px;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item dt {
+  color: #6b7280;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.summary-item dd {
+  font-weight: 700;
+  color: #9f1239;
+  font-size: 13px;
+  text-align: right;
+  word-break: break-word;
+}
+
+.error-text {
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 16px;
+}
