@@ -76,7 +76,6 @@ h1 em, h2 em {
   margin-bottom: 20px;
 }
 
-/* KHU VỰC CÁC NÚT BẤM CĂN GIỮA ĐẸP MẮT */
 .actions-area {
   display: flex;
   flex-direction: column;
@@ -101,7 +100,7 @@ h1 em, h2 em {
   font-size: 15px;
   cursor: pointer;
   user-select: none;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
   width: 100%;
 }
 
@@ -111,7 +110,6 @@ h1 em, h2 em {
   }
 }
 
-/* NÚT CHÍNH MÀU HỒNG ĐỎ */
 .btn-primary {
   background-color: #f43f5e;
   color: white;
@@ -122,18 +120,17 @@ h1 em, h2 em {
   transform: scale(0.96);
 }
 
-/* NÚT PHỤ MÀU XÁM BAN ĐẦU */
 .btn-secondary {
   background-color: #f3f4f6;
   color: #4b5563;
 }
 
-/* HIỆU ỨNG CHUYỂN SANG NÚT HỒNG ĐỎ KHI BẤM "ĐỂ SUY NGHĨ ĐÃ" */
+/* KHI BIẾN THÀNH MÀU ĐỎ HỒNG Ở LẦN BẤM THỨ 3 */
 .btn-converted {
   background-color: #f43f5e !important;
   color: white !important;
   box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3) !important;
-  animation: shake 0.3s ease-in-out;
+  animation: shake 0.35s ease-in-out;
 }
 
 @keyframes shake {
