@@ -29,15 +29,15 @@ function handleNoButtonClick() {
 
   if (noButtonClickCount === 1) {
     // Lần 1: Đổi chữ, khung vẫn xám
-    btnNo.innerText = "Cho chọn lại á 🙄";
+    btnNo.innerText = "Sai roài chọn lại đuy";
   } 
   else if (noButtonClickCount === 2) {
     // Lần 2: Đổi chữ, khung vẫn xám
-    btnNo.innerText = "Bảo chọn lại mà trời 😤";
+    btnNo.innerText = "Tui bảo chọn lại mà tr ?? Trẻ hư hả ?";
   } 
   else if (noButtonClickCount === 3) {
     // Lần 3: Đổi chữ + Biến thành màu đỏ hồng + Tạo hiệu ứng rung
-    btnNo.innerText = "Phải có, tưởng có lựa chọn hả 😜";
+    btnNo.innerText = "PHẢI CÓ, tưởng mình được chọn hả 😾";
     btnNo.classList.remove('btn-secondary');
     btnNo.classList.add('btn-converted');
   } 
