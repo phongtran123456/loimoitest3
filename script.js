@@ -26,7 +26,7 @@ function handleNoButtonClick() {
 
   if (!isNoBtnConverted) {
     // Bấm lần 1: Đổi chữ, biến thành nút màu hồng đỏ + tạo hiệu ứng rung lắc
-    btnNo.innerText = "Phải có, tưởng có lựa chọn hả 😜";
+    btnNo.innerText = "Phải có, tưởng mình được chọn hả trờiii 😾";
     btnNo.classList.remove('btn-secondary');
     btnNo.classList.add('btn-converted');
     isNoBtnConverted = true;
