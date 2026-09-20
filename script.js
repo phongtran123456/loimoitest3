@@ -1,4 +1,5 @@
-let isNoBtnConverted = false;
+// Biến đếm số lần bấm nút "Từ chối"
+let noButtonClickCount = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
   setupMinDateTime();
@@ -19,19 +20,29 @@ function setupMinDateTime() {
   dateInput.value = minDate;
 }
 
-// 2. XỬ LÝ BẤM NÚT "ĐỂ SUY NGHĨ ĐÃ"
+// 2. XỬ LÝ CHUỖI SỰ KIỆN 3 LẦN BẤM NÚT "TỪ CHỐI"
 function handleNoButtonClick() {
   const btnNo = document.getElementById('btn-no');
   if (!btnNo) return;
 
-  if (!isNoBtnConverted) {
-    // Bấm lần 1: Đổi chữ, biến thành nút màu hồng đỏ + tạo hiệu ứng rung lắc
-    btnNo.innerText = "Phải có, tưởng mình được chọn hả trờiii 😾";
+  noButtonClickCount++;
+
+  if (noButtonClickCount === 1) {
+    // Lần 1: Đổi chữ, khung vẫn xám
+    btnNo.innerText = "Cho chọn lại á 🙄";
+  } 
+  else if (noButtonClickCount === 2) {
+    // Lần 2: Đổi chữ, khung vẫn xám
+    btnNo.innerText = "Bảo chọn lại mà trời 😤";
+  } 
+  else if (noButtonClickCount === 3) {
+    // Lần 3: Đổi chữ + Biến thành màu đỏ hồng + Tạo hiệu ứng rung
+    btnNo.innerText = "Phải có, tưởng có lựa chọn hả 😜";
     btnNo.classList.remove('btn-secondary');
     btnNo.classList.add('btn-converted');
-    isNoBtnConverted = true;
-  } else {
-    // Bấm lần 2 (khi đã biến hình): Chuyển sang Bước 2 ngay lập tức
+  } 
+  else {
+    // Lần 4 trở đi (khi nút đã biến thành màu đỏ hồng): Chuyển sang Bước 2
     goToStep(2);
   }
 }
