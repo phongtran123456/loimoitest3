@@ -72,7 +72,7 @@ function handleFormSubmit(event) {
   }
 
   if (activities.length === 0) {
-    errorMsg.innerText = 'Thi chọn ít nhất 1 hoạt động hoặc tự nhập thêm nha! 😊';
+    errorMsg.innerText = 'Hong thèm chọn hoạt động luôn hả tr, tính mời rồi để tui tự chọn hả ?? 😒';
     return;
   }
 
@@ -85,7 +85,7 @@ function handleFormSubmit(event) {
   }
 
   if (selectedDateTime < now) {
-    errorMsg.innerText = 'Thi ơi, không thể du hành về quá khứ chọn giờ đã qua được nè! 😁';
+    errorMsg.innerText = 'Cô bé này tính hẹn nhau ở quá khứ hay gì zậy ta ?';
     return;
   }
 
