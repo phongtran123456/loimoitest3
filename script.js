@@ -72,7 +72,7 @@ function handleFormSubmit(event) {
   }
 
   if (activities.length === 0) {
-    errorMsg.innerText = 'Hong thèm chọn hoạt động luôn hả tr, tính mời rồi để tui tự chọn hả ?? 😒';
+    errorMsg.innerText = 'Hong thèm chọn hoạt động luôn hả tr, bộ tính ra nhìn mặt nhao thôi hả ?? 😒';
     return;
   }
 
