@@ -43,8 +43,8 @@ function setupPhongOptionHandler() {
       }, 4000);
     } else {
       // Khi bỏ chọn: trả lại tên ban đầu
-      phongSpan.innerText = "Thi chọn cho mình đi :3";
-      phongInput.value = "Thi chọn cho mình đi :3";
+      phongSpan.innerText = "Phong tự chọn luôn đi";
+      phongInput.value = "Phong tự chọn luôn đi";
     }
   });
 }
