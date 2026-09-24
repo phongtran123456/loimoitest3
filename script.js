@@ -3,6 +3,7 @@ let noButtonClickCount = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
   setupMinDateTime();
+  setupPhongOptionHandler();
 });
 
 // 1. TỰ ĐỘNG KHÓA NGÀY TỐI THIỂU LÀ NGÀY HIỆN TẠI
