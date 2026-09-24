@@ -31,7 +31,7 @@ function setupPhongOptionHandler() {
     if (phongInput.checked) {
       // Khi bấm chọn: hiện câu chọc ghẹo ngay lập tức
       phongSpan.innerText = "Để cái option thử lòng ms có tí mà đã bấm rồi 😒";
-      
+      phongInput.value = "Thi sẽ tự chọn 😜";
 
       // Đợi đúng 4 giây (4000ms) đổi thành câu chốt
       setTimeout(() => {
