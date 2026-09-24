@@ -20,6 +20,34 @@ function setupMinDateTime() {
   dateInput.value = minDate;
 }
 
+// 1.5 TÍNH NĂNG TROLL 5S DÀNH CHO NÚT "PHONG TỰ CHỌN ĐI"
+function setupPhongOptionHandler() {
+  const phongInput = document.getElementById('input-phong-option');
+  const phongSpan = document.getElementById('span-phong-option');
+
+  if (!phongInput || !phongSpan) return;
+
+  phongInput.addEventListener('change', () => {
+    if (phongInput.checked) {
+      // Khi bấm chọn: hiện câu chọc ghẹo ngay lập tức
+      phongSpan.innerText = "Để cái option thử lòng ms có tí mà đã bấm rồi 😒";
+      
+
+      // Đợi đúng 4 giây (4000ms) đổi thành câu chốt
+      setTimeout(() => {
+        if (phongInput.checked) {
+          phongSpan.innerText = "Thi chọn cho mình đi :3";
+          phongInput.value = "Thi chọn cho mình đi :3";
+        }
+      }, 4000);
+    } else {
+      // Khi bỏ chọn: trả lại tên ban đầu
+      phongSpan.innerText = "Phong tự chọn luôn đi";
+      phongInput.value = "Phong tự luôn đi";
+    }
+  });
+}
+
 // 2. XỬ LÝ CHUỖI SỰ KIỆN 3 LẦN BẤM NÚT "TỪ CHỐI"
 function handleNoButtonClick() {
   const btnNo = document.getElementById('btn-no');
